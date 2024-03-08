@@ -1,43 +1,54 @@
-import { useState } from 'react'
-import './weather.css'
+import { useState } from 'react';
 
 function App() {
-  let [city,setcity]=useState('')
-  let getdata=(event)=>{
-    fetch('https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API key}')
-    .then((res)=>res.json())
-    .then((final)=>{
-      console.log(final);
+  let [dataset, setdata] = useState([]);
+  
+  let clickfunction = () => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        setdata(data);
+      });
+  };
+
+  const [id, setId] = useState('');
+  const [title, setTitle] = useState('');
+
+  let submit = (e) => {
+    e.preventDefault(); // Prevent the default form submit action
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify({ title: title, id: id }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
     })
-
-
-    event.preventDefault()
-    setcity('')
-  }
-
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  };
 
   return (
     <>
-      <div className="cointner">
+      <form onSubmit={submit}>
+        <input type="text" placeholder='id' onChange={(e) => setId(e.target.value)} />
+        <input type="text" placeholder='title' onChange={(e) => setTitle(e.target.value)} />
+        <button type="submit">submit</button>
+      </form>
 
-        <div className="box">
-
-          <h2>Weather</h2>
-
-          <div className="input">
-            <form onSubmit={getdata} >
-              <input type="text" value={city} onChange={(e)=>setcity(e.target.value)} name="" id="" />
-              <button>search</button>
-            </form>
-          </div>
-           
-          <p>Ahmedabad</p>
-          <p>Country</p>
-          <p>Temperature</p>
+      <button onClick={clickfunction}>Click here</button>
+      {dataset.length > 0 && (
+        <div>
+          {dataset.map((mappeddata) => (
+            <div key={mappeddata.id}>
+              <p>id={mappeddata.id}</p>
+              <p>title={mappeddata.title}</p>
+            </div>
+          ))}
         </div>
-      </div>
+      )}
     </>
-  )
+  );
 }
-
-export default App
+export default App;
