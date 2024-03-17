@@ -1,0 +1,26 @@
+section {
+    border: 2px solid black;
+}
+
+.box {
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.inner-box {
+    border: 2px solid black;
+    color: red;
+    width: 30%;
+    text-align: center;
+}
+
+.btn {
+    margin: 2rem;
+}
+
+.btn button {
+    margin: 0 1rem;
+}
