@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="row">
+            <div class="col-20">
+                <div class="link">
+                    <a href="#" class="a tc">Life cycle-Hooks</a>
+                </div>
+            </div>
+            <div class="col-80">
+                <h1 class="tc">Lists and Hooks</h1>
+                <p class="title bounce">REACT-JS ASSIGMENT</p>
+                <div class="que1 dis">
+                    <div class="que">
+                        <h2>Explain Life cycle in Class Component and functional component with Hooks</h2>
+                    </div>
+                    <div class="ans">
+                        <p class="highlight"><b>CLASS COMPONENT</b>
+                        </p>
+                        <p>&#8608 A class component in React is a way of defining a component using ES6 classes.
+                        </p>
+                        <p>&#8608Class components are more complex than functional components but provide more features,
+                            including the ability to hold and manage local state and access lifecycle methods.
+                        </p>
+                        <p>&#8608 In the class component we have three phase and several method </p>
+                        <br>
+                        <p class="highlight">&#8608 MOUNT</p>
+                        <p> &#8608 Mounting is the stage when the component is being created and inserted into the DOM.
+                        </p>
+                        <br>
+                        <ul>
+                            <li>constructor(props):Used for initializing state or binding event handlers to the
+                                instance.</li>
+                            <li>static getDerivedStateFromProps(props, state):Used to update the state in response to a
+                                change in props</li>
+                            <li>render():Responsible for returning JSX.</li>
+                            <li>componentDidMount():Invoked immediately after a component is mounted.</li>
+                        </ul>
+                        <img src="./mount.png" alt="">
+                        <br>
+                        <p class="highlight">&#8608 Updating</p>
+                        <p> &#8608 Occurs when the component's props or state change.
+                        </p>
+                        <br>
+                        <ul>
+                            <li>shouldComponentUpdate(Props, State)</li>
+                            <li>getSnapshotBeforeUpdate(Props,State)</li>
+                            <li>getSnapshotBeforeUpdate() </li>
+                            <li>componentDidUpdate() </li>
+                            <li>render():Responsible for returning JSX.</li>
+                        </ul>
+                        <img src="./update.png" alt="">
+                        <br>
+                        <p class="highlight">&#8608 unmounting</p>
+                        <br>
+                        <ul>
+                            <li>componentWillUnmount()</li>
+                        </ul>
+                        <img src="./unmount.png" alt="">
+                        <br>
+                        <p class="highlight"><b>FUNCTIONAL COMPONENT</b>
+                        <p>&#8608 ReactJS Functional components are some of the more common components that will come
+                            across while working in React
+                        </p>
+                        <p>&#8608These are simply JavaScript functions</p>
+                        <p>&#8608 We can create a functional component in React by writing a JavaScript function. </p>
+                        <br>
+                        <p class="highlight">&#8608 USESTATE</p>
+                        <p> &#8608 the React useState Hook allows us to track state in a function component.</p>
+                        <p> &#8608 useState has a two parameter:value and function</p>
+                        <br>
+                        <img src="./usestate.png" alt="">
+                        <br>
+                        <p class="highlight">&#8608 USEEFFECT</p>
+                        <p> &#8608 The useEffect Hook allows you to perform side effects in your components.</p>
+                        <p> &#8608 useEffect accepts two arguments. first is function and second is dependency</p>
+                        <br>
+                        <img src="./useeffect.png" alt="">
+                        <br>
+                        <p class="highlight">&#8608 CONTEXT</p>
+                        <p> &#8608 React Context is a way to manage state globally.</p>
+                        <p> &#8608 It can be used together with the useState Hook and easily manage nested component</p>
+                        <br>
+                        <img src="./context.png" alt="">
+                        <br>
+                        <p class="highlight">&#8608 USEREF</p>
+                        <p> &#8608 The useRef is a hook that allows to directly create a reference to the DOM element
+                        </p>
+                        <br>
+                        <img src="./useref.png" alt="">
+                        <br>
+                        <p class="highlight">&#8608 USEREDUCER</p>
+                        <p> &#8608 The useReducer Hook is similar to the useState Hook.
+                        </p>
+                        <p> &#8608 It can be used together with the useState Hook and easily manage nested component</p>
+                        <br>
+                        <img src="./usereducer.png" alt="">
+                        <br>
+                        <p class="highlight">&#8608 USECALLBACK</p>
+                        <p> &#8608 The useCallback hook in React is a way to remember and reuse functions in your
+                            components.
+                        </p>
+                        <p> &#8608It helps to optimize performance.</p>
+                        <br>
+                        <img src="./usecallback.png" alt="">
+                        <br>
+                        <p class="highlight">&#8608 USEMEMO</p>
+                        <p> &#8608The useMemo hook in React is like a smart memoization tool.
+                        </p>
+                        <p> &#8608The useMemo Hook only runs when one of its dependencies update. This can improve
+                            performance.</p>
+                        <br>
+                        <img src="./usememo.png" alt="">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script>
+        let col20 = document.querySelector(".col-20");
+        let aElements = col20.querySelectorAll("a");
+
+        aElements.forEach(a => {
+            a.onclick = () => {
+                let index = a.classList[0].charCodeAt(0) - 'a'.charCodeAt(0) + 1;
+                let targetQuestion = document.querySelector(`.que${index}`);
+
+
+                document.querySelectorAll('.dis').forEach(question => {
+                    question.style.display = 'none';
+                });
+
+
+                targetQuestion.style.display = "block";
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
