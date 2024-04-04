@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Skills from './components/Skills';
 const App = () => {
     useEffect(() => {
         Aos.init({
@@ -17,6 +18,7 @@ const App = () => {
         <>
             <Navbar />
             <Hero />
+            <Skills />
         </>
     )
 }

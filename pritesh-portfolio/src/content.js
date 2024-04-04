@@ -1,12 +1,15 @@
 // // import images
 import Hero_person from "./assets/images/Hero/person.png";
 
-// import figma from "./assets/images/Skills/figma.png";
-// import sketch from "./assets/images/Skills/sketch.png";
-// import ps from "./assets/images/Skills/ps.png";
-// import reactjs from "./assets/images/Skills/react.png";
-// import nodejs from "./assets/images/Skills/node.png";
-// import python from "./assets/images/Skills/python.png";
+import reactjs from "./assets/images/Skills/react.png";
+import jquery from "./assets/images/Skills/jquery.jpg";
+import js from "./assets/images/Skills/js.jpeg"
+import bootstrap from "./assets/images/Skills/bootstrap.jpeg"
+import css from "./assets/images/Skills/css.jpeg"
+import html from "./assets/images/Skills/html.jpg"
+import git from "./assets/images/Skills/git.jpeg"
+import github from "./assets/images/Skills/github.png"
+
 
 // import services_logo1 from "./assets/images/Services/logo1.png";
 // import services_logo2 from "./assets/images/Services/logo2.png";
@@ -70,43 +73,53 @@ export const content = {
             },
         ],
     },
-    // skills: {
-    //     title: "Skills",
-    //     subtitle: "MY TOP SKILLS",
-    //     skills_content: [
-    //         {
-    //             name: "Figma",
-    //             para: "Lorem ipsum text  dummy",
-    //             logo: figma,
-    //         },
-    //         {
-    //             name: "Node js",
-    //             para: "Lorem ipsum text  dummy",
-    //             logo: nodejs,
-    //         },
-    //         {
-    //             name: "Adobe Photoshop",
-    //             para: "Lorem ipsum text  dummy",
-    //             logo: ps,
-    //         },
-    //         {
-    //             name: "React js",
-    //             para: "Lorem ipsum text  dummy",
-    //             logo: reactjs,
-    //         },
-    //         {
-    //             name: "Sketch",
-    //             para: "Lorem ipsum text  dummy",
-    //             logo: sketch,
-    //         },
-    //         {
-    //             name: "Python",
-    //             para: "Lorem ipsum text  dummy",
-    //             logo: python,
-    //         },
-    //     ],
-    //     icon: MdArrowForward,
-    // },
+    skills: {
+        title: "Skills",
+        subtitle: "MY TOP SKILLS",
+        skills_content: [
+            {
+                name: "React js",
+
+                logo: reactjs,
+            },
+            {
+                name: "Jquery",
+
+                logo: jquery,
+            },
+            {
+                name: "Java Script",
+
+                logo: js,
+            },
+            {
+                name: "Bootstrap",
+
+                logo: bootstrap,
+            },
+            ,
+            {
+                name: "Css",
+                logo: css,
+            },
+            {
+                name: "Html",
+
+                logo: html,
+            },
+            {
+                name: "Git",
+
+                logo: git,
+            },
+            {
+                name: "Git-Hub",
+
+                logo: github,
+            }
+        ],
+        icon: MdArrowForward,
+    },
     // services: {
     //     title: "Services",
     //     subtitle: "WHAT I OFFER",

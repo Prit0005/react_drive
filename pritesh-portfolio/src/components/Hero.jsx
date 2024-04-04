@@ -38,7 +38,15 @@ const Hero = () => {
                         ))}
                     </div>
                     <div className="">
-                        <button className="btn" onClick={toggleOverlay}>{hero.btnText}</button>
+                        {/* <button className="btn" onClick={toggleOverlay}></button> */}
+
+                        <div class="relative inline-block">
+                            <a href="#" onClick={toggleOverlay} class="group rounded-md inline-flex items-center px-8 py-5 border-2 border-black bg-transparent text-black font-bold text-xs uppercase tracking-wider cursor-pointer hover:bg-black hover:text-white transition-colors duration-300">
+                                <span class="absolute bottom-0 right-4 h-0.5 w-4 bg-gray-300 group-hover:w-0 transition-all duration-500"></span>
+                                {hero.btnText}
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 
