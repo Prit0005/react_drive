@@ -38,7 +38,7 @@ const Hero = () => {
                         ))}
                     </div>
                     <div className="">
-                        {/* <button className="btn" onClick={toggleOverlay}></button> */}
+
 
                         <div class="relative inline-block">
                             <a href="#" onClick={toggleOverlay} class="group rounded-md inline-flex items-center px-8 py-5 border-2 border-black bg-transparent text-black font-bold text-xs uppercase tracking-wider cursor-pointer hover:bg-black hover:text-white transition-colors duration-300">
