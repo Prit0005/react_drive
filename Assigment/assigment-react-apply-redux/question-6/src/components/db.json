@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "user1",
+      "password": "password1",
+      "name": "jklm"
+    },
+    {
+      "id": "d158",
+      "username": "pritesh",
+      "password": "1234"
+    },
+    {
+      "id": "cf8e",
+      "username": "hy",
+      "password": "12"
+    },
+    {
+      "id": "a74e",
+      "username": "mahesh",
+      "password": "123"
+    },
+    {
+      "id": "b7f7",
+      "username": "prit",
+      "password": "patel"
+    },
+    {
+      "id": "f915",
+      "name": "jkl"
+    },
+    {
+      "id": "d73c",
+      "name": "kiojij"
+    }
+  ],
+  "items": [
+    {
+      "id": "1",
+      "name": "Item 1"
+    },
+    {
+      "id": "2",
+      "name": "Item 2"
+    }
+  ]
+}

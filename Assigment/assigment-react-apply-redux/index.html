@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="row">
+            <div class="col-20">
+                <div class="link">
+                    <a href="#" class="a tc">Redux</a>
+                    <hr>
+                    <a href="#" class="b tc">Redux Thunk</a>
+                    <hr>
+                    <a href="#" class="c tc">Pure Component</a>
+                    <hr>
+                    <a href="#" class="d tc"> second argument that can optionally be passed tosetState</a>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-80">
+                <h1 class="tc">Module-7) React - Applying Redux</h1>
+                <p class="title bounce">React - Applying Redux</p>
+                <div class="que1 dis">
+                    <div class="que">
+                        <h2>What is Redux?</h2>
+                    </div>
+                    <div class="ans">
+                        <p>&#8608Redux was created by Dan Abramov and Andrew Clark and was inspired by the Flux
+                            architecture from Facebook.</p>
+                        <p>&#8608Redux is a popular JavaScript library for managing and centralizing application state.
+                        </p>
+                        <p>&#8608It is most commonly used with libraries such as React or Angular but can be used with
+                            any other JavaScript framework or library.
+                        </p>
+                    </div>
+                </div>
+                <div class="que2  dis">
+                    <div class="que">
+                        <h2>What is Redux Thunk used for?</h2>
+                    </div>
+                    <div class="ans">
+                        <p>&#8608
+                            Redux Thunk is a middleware for Redux that allows you to write action that return a function
+                            instead of an action.</p>
+                        <p>&#8608you use Redux Thunk, an action returns a function instead of an action object.</p>
+                        <p>&#8608 This returned function can perform asynchronous tasks and can also dispatch multiple
+                            actions.</p>
+                    </div>
+                </div>
+                <div class="que3  dis">
+                    <div class="que">
+                        <h2>What is Pure Component? When to use Pure Component over
+                            Component?</h2>
+                    </div>
+                    <div class="ans">
+                        <p>&#8608 a PureComponent offers a simplified method of optimizing performance in class
+                            components.</p>
+                        <br>
+                        <h3>When to Use PureComponent </h3>
+                        <br>
+                        <p>&#8608Predictable Data Structures: Use PureComponent when you have simple props and state
+                            structures where a shallow comparison can accurately determine if changes have been made.
+                        </p>
+                        <br>
+                        <p>&#8608Performance Optimization: In cases where your component keeps re-rendering but the
+                            actual data hasn’t changed</p>
+                        <br>
+                        <p>&#8608Static Subcomponents: If a component has subcomponents that do not depend on props or
+                            state and render the same output every time</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="que4  dis">
+                    <div class="que">
+                        <h2>What is the second argument that can optionally be passed
+                            tosetState and what is its purpose?</h2>
+                    </div>
+                    <div class="ans">
+                        <p>&#8608In React, the second argument that can be optionally passed to setState is a callback
+                            function.</p>
+                        <p>&#8608 Its purpose is to execute code immediately after the state has been updated and the
+                            component has been re-rendered</p>
+                        <p>&#8608 you using the callback function, you can access the updated state and perform actions
+                            accordingly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        let col20 = document.querySelector(".col-20");
+        let aElements = col20.querySelectorAll("a");
+
+        aElements.forEach(a => {
+            a.onclick = () => {
+                let index = a.classList[0].charCodeAt(0) - 'a'.charCodeAt(0) + 1;
+                let targetQuestion = document.querySelector(`.que${index}`);
+
+
+                document.querySelectorAll('.dis').forEach(question => {
+                    question.style.display = 'none';
+                });
+
+
+                targetQuestion.style.display = "block";
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
